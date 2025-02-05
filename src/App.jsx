@@ -41,19 +41,36 @@
 
 // export default App;
 
-import React,{ Component } from 'react'
-import FBCPropsex1 from './propsexample/FBCPropsex1';
+// import React,{ Component } from 'react'
+// import FBCPropsex1 from './propsexample/FBCPropsex1';
 
-const App=() =>{
-        return (
-            <div>
-                <FBCPropsex1
-                username="Sam"
-                isLoggedIn={false}
-                hobbies={["Roaming","watching movies","travel","studies"]}
+// const App=() =>{
+//         return (
+//             <div>
+//                 <FBCPropsex1
+//                 username="Sam"
+//                 isLoggedIn={false}
+//                 hobbies={["Roaming","watching movies","travel","studies"]}
                
-                />
-            </div>
+//                 />
+//             </div>
+//     )
+// }
+// export default App;
+
+import React from 'react'
+import PropsChildrenEx from './propsexample/PropsChildrenEx'
+import ChildProps from './propsexample/ChildProps'
+
+const App=()=>{
+    return(
+        <div>
+            <PropsChildrenEx username="John" company="meta">
+                <h1>This data is passed as props children</h1>
+                <ChildProps/>
+            </PropsChildrenEx>
+        </div>
     )
 }
-export default App;
+
+export default App
